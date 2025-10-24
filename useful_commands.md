@@ -20,7 +20,12 @@ but it is only matter of time until it gets easier
 -- reading out global config (with this one we can manage
 lots of stuff like our user , credentials , init branch name , aliases , etc... ) --
 
-1. git config --global -e
+1. <check your credentials>
+1. nano ~/.git-credentials
+2. git config --global -e
+
+
+
 
 
 # Alias !
