@@ -312,3 +312,35 @@ east access.
 """
 
 1. git tag -a $tag name $hash -m $tag message
+
+
+
+# stash !
+
+"""
+
+Stashes are little vaults where we keep our current changes in case of emergencies
+for example:
+
+Lets say you are making a new functionality for your project but your PM wants you to deploy 
+some image right now , in that special case you could use stash to keep your changes stored
+and post the cat image.
+
+From my perspective i don't recommend using too many vaults simultaneously.
+Also use branches to ensure a good flow.
+
+"""
+
+
+1. git stash
+
+(saves current commit as a WIP)
+
+2. git stash list
+
+(shows all of your stash vaults)
+
+3. git stash pop
+
+(recovers the first stash in your stash list)
+
