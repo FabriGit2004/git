@@ -1,5 +1,5 @@
-# !!! => external things you should do
 
+This is a brief git cheatsheet made by me to help you guys understand some concepts. :)
 
 # start repository
 
