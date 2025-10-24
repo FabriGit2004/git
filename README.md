@@ -20,7 +20,7 @@ but it is only matter of time until it gets easier
 -- reading out global config (with this one we can manage
 lots of stuff like our user , credentials , init branch name , aliases , etc... ) --
 
-1. !!! check your credentials
+1. $ check your credentials
 1. nano ~/.git-credentials
 2. git config --global -e
 
@@ -40,7 +40,7 @@ called alias
 
 -- setting aliases --
 
-1. git config --global alias.!!!name !!!"alias-function"
+1. git config --global alias.$name $"alias-function"
 
 
 
@@ -61,12 +61,12 @@ To add files we have some options that we can use.
 
 -- option A --
 
-1. git add !!!file
+1. git add $file
 
 
 -- option B --
 
-1. git add !!!directory
+1. git add $directory
 
 
 -- option C --
@@ -85,7 +85,7 @@ To add files we have some options that we can use.
 
 -- option E --
 
-1. git add *.!!!file extension
+1. git add *.$file extension
 
 (this one is to add files with certain extensions)
 
@@ -138,31 +138,31 @@ to fix this see the resets! part.
 
 1. git log 
 2. spot the hash of your target commit
-3. git checkout !!!hash
+3. git checkout $hash
 
 
 # commit 
 
 -- option A --
 
-1. !!!Add the files using one of the add options i taught you
-2. git commit -m !!!"message"
+1. $Add the files using one of the add options i taught you
+2. git commit -m $"message"
 
 -- option B -- 
 
-1. git commit -am !!!"message"
+1. git commit -am $"message"
 (This one is like doing => git add . => git commit -m "example")
 
 # ammend commits
 
 -- option A -- 
-1. !!!make some wrong commit messages XD
+1. $make some wrong commit messages XD
 2. git commit --amend
 (This one lets you correct your last commit message)
 
 -- option B --
 
-1. git commit --amend -m !!!"message"
+1. git commit --amend -m $"message"
 (This one is the same as the previous one but shorter and without GUI) 
 
 
@@ -189,8 +189,8 @@ ranges :
 "mixed => resets , doesn't keep the file on stage"
 "hard => resets, destroys everything , rebuilds from zero"
 
-1. !!!get the hash of your fucked up commit
-2. git reset !!!--range !!!hash
+1. $get the hash of your fucked up commit
+2. git reset $--range $hash
 (This makes the HEAD points towards the hash)
 
 !! IMPORTANT !!
@@ -212,7 +212,7 @@ you can access this like the commit log.
 """
 
 1. git reflog
-2. git reset --hard !!!hash
+2. git reset --hard $hash
 
 We use this to move our whole project to a certain time reference.
 
@@ -227,7 +227,7 @@ When we want to rename a file we should do it in the stage.
 """
 
 
-1. git mv !!!old file OR  old directory !!!new file OR new directory
+1. git mv $old file OR  old directory $new file OR new directory
 
 (we do this to keep git informed about our changes)
 
@@ -247,7 +247,7 @@ git can lose track of the whole history of your file.
 """
 
 
-1. git rm !!!-param !!!file or directory
+1. git rm $-param $file or directory
 
 
 
@@ -285,11 +285,11 @@ these three outputs:
 """
 
 
-1. git branch !!!name of the branch
-2. git checkout !!!name of the branch
-3. !!!do changes
-4. !!!go back to master or main once you have finished
-5. once in main or master => git merge !!!name of the branch
+1. git branch $name of the branch
+2. git checkout $name of the branch
+3. $do changes
+4. $go back to master or main once you have finished
+5. once in main or master => git merge $name of the branch
 
 (our outcome will depend on how fucked up everything is.)
 
@@ -308,4 +308,4 @@ east access.
 
 """
 
-1. git tag -a !!!tag name !!!hash -m !!!tag message
+1. git tag -a $tag name $hash -m $tag message
