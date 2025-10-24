@@ -340,8 +340,17 @@ Also use branches to ensure a good flow.
 
 (shows all of your stash vaults)
 
-3. git stash pop
+3. git stash popim not a bitch
 
 (recovers the first stash in your stash list)
 
 
+!! important !!
+
+you can get a stash conflict if : 
+        - you stashed file changes.
+        - make new changes again and commit.
+        - stash pop
+
+this will 100% generate conflict so be carfeul while managing 
+your stashes.
