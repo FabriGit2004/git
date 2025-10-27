@@ -336,13 +336,14 @@ Also use branches to ensure a good flow.
 
 (saves current commit as a WIP)
 
-2. git stash list
+2. git stash list OR git stash list --stat
 
 (shows all of your stash vaults)
 
 3. git stash popim not a bitch
 
 (recovers the first stash in your stash list)
+
 
 
 !! important !!
@@ -354,3 +355,67 @@ you can get a stash conflict if :
 
 this will 100% generate conflict so be carfeul while managing 
 your stashes.
+
+
+other useful stuff : 
+
+4. git stash apply $stash-hash
+
+5. git stash drop $stash-hash
+
+6. git stash show $stash-hash
+
+7. git stash save $stash-name
+
+8. git stash clear
+
+
+# rebase !
+
+"""
+Sometimes we may find ourselves needing new changes from another branch in these
+cases we can use rebase to stash the current changes from our branch , 
+merge the changes from the other branch and then 
+bring our changes back to our rebased branch.
+
+"""
+
+
+1. first you need to position yourself in the branch you need to rebase
+2. git rebase $branch
+
+after doing this we can merge and we will get a fast-forward.
+
+"""
+
+Also sometimes we do lots of commits to do the same task and we may want
+to merge those commits to only have one.
+
+in those cases we use rebase with the squash parameter
+
+"""
+
+1. git rebase -i $commit-hash~$number-of-commits
+2. use the shortcut s before the commit hash or you can use squash also
+
+
+"""
+
+Then we have our stacked commits where we dumped lots changes inside one 
+single commit , in those cases we can use the shortcut e or shortcut before 
+hash commit , when we do this we should  reset our actual branch one commit 
+or X commits to position ourselves where our changes were done so we can commit
+then one by one or group by group.
+
+"""
+
+1. spot your stacked commit.
+2. git rebase -i $commit-hash~$number-of-commits-taken
+3. append the prefix e to the commit you wish to split.
+4. git reset HEAD^ or git reset $--range $commit-hash
+5. do the changes you wish
+6. commit your changes
+7. git rebase --continue
+
+
+
